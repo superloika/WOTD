@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">#WOTD</string>
+    <string name="settings">com.example.kaloi.wotd.SETTINGS</string>
+    <string name="wotd">#WordOfTheDay</string>
+    <string name="feat_text">WOTD\'s ultimate feature is the app\'s homescreen widget.\n\nAdd the widget right into your homescreen to display a random english word everyday with its tagalog term or meaning.\n\nStart building now your vocabulary effectively!</string>
+    <string name="clear_all_button">clear_all_button</string>
+</resources>

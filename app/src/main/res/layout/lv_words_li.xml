@@ -1,0 +1,37 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:padding="15dp">
+    <ImageView
+        android:id="@+id/iv_b"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/b"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="TODO" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:fontFamily="sans-serif-condensed"
+            android:id="@+id/tv_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kaloi"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:paddingLeft="4dp"/>
+        <TextView
+            android:fontFamily="sans-serif-condensed"
+            android:id="@+id/tv_def"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kaloi"
+            android:textSize="16sp"
+            android:textColor="#fff"
+            android:paddingLeft="4dp"/>
+    </LinearLayout>
+</LinearLayout>

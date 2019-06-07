@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kaloi.wotd">
+
+    <application
+
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/wotd_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/wotd_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Splash"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".WOTDWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/wotd_appwidget_info" />
+        </receiver>
+
+        <service
+            android:name=".WidgetUpdater"
+            android:label="WOTDWidgetUpdater"
+            android:launchMode="singleTop" />
+
+        <!-- <receiver android:name=".Splash$myReceiver"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.example.kaloi.wotd.INITDB_DONE" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- <receiver android:name=".AlarmReceiver" -->
+        <!-- android:enabled="true"></receiver> -->
+
+        <activity
+            android:name=".MainActivity"
+            android:label="#WordOfTheDay"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <!-- <service android:name=".WOTDService"></service> -->
+        <activity
+            android:name=".About"
+            android:label="About"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+
+        <!--
+            <provider
+            android:name="."
+            android:authorities="com.example.mycloudprovider"
+            android:enabled="@bool/isAtLeastKitKat"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:permission="android.permission.MANAGE_DOCUMENTS">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER" />
+            </intent-filter>
+        </provider>
+        -->
+
+        <activity android:name=".AddWord"
+            android:label="Add Word"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".WordsList"/>
+        <activity android:name=".WordsList"
+            android:label="All Words"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".UpdateWord"
+            android:label="Update Word"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".WordsList"/>
+    </application>
+
+</manifest>
